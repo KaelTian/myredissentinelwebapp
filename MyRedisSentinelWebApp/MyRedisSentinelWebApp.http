@@ -1,0 +1,6 @@
+@MyRedisSentinelWebApp_HostAddress = http://localhost:5020
+
+GET {{MyRedisSentinelWebApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
