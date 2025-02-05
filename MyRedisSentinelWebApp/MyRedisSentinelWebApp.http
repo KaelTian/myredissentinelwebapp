@@ -4,3 +4,18 @@ GET {{MyRedisSentinelWebApp_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+POST {{MyRedisSentinelWebApp_HostAddress}}/api/redis
+Content-Type:application/json
+Accept:application/json
+{
+  "key": "kaelhttptestwindows",
+  "value": "kael value for http test on windows"
+}
+
+###
+
+GET {{MyRedisSentinelWebApp_HostAddress}}/api/redis/kaelhttptest
+Accept:application/json
+
+###

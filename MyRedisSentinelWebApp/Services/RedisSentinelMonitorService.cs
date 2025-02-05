@@ -71,7 +71,7 @@ namespace MyRedisSentinelWebApp.Services
 
                     using var sentinelConnection = await ConnectionMultiplexer.ConnectAsync(sentinelConfig);
                     var server = sentinelConnection.GetServer(sentinelConfig.EndPoints.First());
-                    var masterInfo = await server.SentinelGetMasterAddressByNameAsync(_redisSettings.MasterName);
+                    var masterInfo = await server.SentinelGetMasterAddressByNameAsync(_redisSettings.ServiceName);
                     if (masterInfo != null)
                     {
                         return masterInfo;
